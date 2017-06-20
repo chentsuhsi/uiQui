@@ -13,40 +13,21 @@ $(document).ready(function() {
 //  ====================================================================================================================
 //  general functions
 function search() {
-    var api = 'https://en.wikipedia.org/w/api.php'+
-              '?callback=?' +
-              '&action=opensearch' +
-              '&format=json' +
-              '&profile=fuzzy' +
-              '&limit=10' +
-              '&prop=imageinfo&format=json&iiprop=urll' +
-              '&search=' +
-              encodeURI(title);
-    var page = 'https://en.wikipedia.org/?curid=';
+    var title = encodeURI($('#searchTxt').val());
+    getWikipediaResults(title, showResults )
+}
 
-    $.ajax({
-        url: "https://en.wikipedia.org/w/api.php",
-        jsonp: "callback",
-        dataType: 'jsonp',
-        data: {
-            action: "query",
-            list: "search",
-            srsearch: $("#searchtxt").val(),
-            srinfo: "suggestion",
-            srlimit: "50",
-            format: "json"
-        },
-        xhrFields: {
-            withCredentials: true
-        },
-        success: showResults
+function getWikipediaResults(searchTerms, callback) {
+    var apiURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchTerms + "&limit=10&namespace=0&format=json&warningsaserror=true&callback=?";
+
+    $.getJSON(apiURL, function success(data) {
+        callback(data);
     });
+}
 
-    function showResults (data) {
-        myObj = data;
-        console.log(data);
-    }
-
+function showResults(data) {
+    myObj = data;
+    console.log(data);
 }
 
 
