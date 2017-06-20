@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uiQui Viewer</title>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+    <!-- ======================================================================= -->
+    <!-- NavBar -->
+    <div class="navbar navbar-inverse navbar-default navbar-fnt navbar-backgrnd navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="padding: 15px 15px">
+                    <img class="img-responsive img-circle" style="display: inline-block"
+                         src="imgs/easyApp.BR.png" alt="" width="30"/><span style="display: inline-block; padding-left: 10px"> easyApps.BR</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <form class="navbar-form navbar-left" onsubmit="search()">
+                            <div class="form-group myNavbar">
+                                <input type="text" placeholder="Search" id="searchTxt" class="form-control">
+                                <button type="submit" class="btn btn-default myNavbar" id="btnSearch">
+                                    <span class="fa fa-search">Submit</span>
+                                </button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://chentsuhsi.github.io" target="_blank"><span class="fa fa-info fa-2x"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- NavBar -->
+    <div class="container-fluid navbar-offset myContainer">
+
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- Footer -->
+    <div class="navbar navbar-inverse navbar-fixed-bottom footer">
+        <div class="container-fluid text-center footer">
+            <p class="col-xs-12 col-sm-4" >Inspired by <a href="https://www.freecodecamp.com" target="_blank">freeCodeCamp</a></p>
+            <p class="col-xs-12 col-sm-4" >Coded by <a href="https://chentsuhsi.github.io" target="_blank">Chen, Tsu Hsi</a></p>
+            <p class="col-xs-12 col-sm-4" >easyApps.BR © <script>document.write(new Date().getFullYear())</script>. All Lefts Donated.</p>
+        </div>
+    </div>
+
+</body>
+</html>
